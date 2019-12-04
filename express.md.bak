@@ -1,0 +1,79 @@
+# Express
+
+### 什麼是 Express
+
+- 後端框架 (backend framework) / 伺服器端框架 (frontend framework)
+- <https://expressjs.com/>
+- [Frameworks built on Express](https://expressjs.com/en/resources/frameworks.html)
+
+```js
+const express = require('express')
+const app = express()
+
+app.get('/', function(req, res) {
+  res.send('Hello World')
+})
+
+app.listen(3000)
+```
+
+### 控制路由
+
+- get
+- post
+- put
+- del
+
+```js
+app.get('/', function(req, res) {
+  res.send('hello world')
+})
+```
+
+### Middleware
+
+![](https://devopedia.org/images/article/157/3224.1551338491.png)
+
+Ref: from <https://devopedia.org/express-js>
+
+[Using Express middleware](https://expressjs.com/en/guide/using-middleware.html)
+
+### First Example
+
+```js
+const express = require('express')
+const app = express()
+
+app.get('/', function(req, res) {
+  res.send('hello world')
+})
+
+app.listen(3000)
+```
+
+### Async & Await
+
+```js
+const express = require('express')
+const { wrapAsync } = require('@rimiti/express-async')
+const app = express()
+
+app.get(
+  '/example',
+  wrapAsync(async function example(req, res, next) {
+    res.status(200).send({ success: true })
+  })
+)
+```
+
+- [How to use async/await functions with Express ?](https://dimsolution.com/blog/2019-02-12/how-to-use-async-await-functions-with-express/)
+
+- [Express 5.x](https://expressjs.com/en/5x/api.html)
+
+## Request
+
+[Express 4.x](https://expressjs.com/en/4x/api.html#req)
+
+## Response
+
+[Express 4.x](https://expressjs.com/en/4x/api.html#res)
