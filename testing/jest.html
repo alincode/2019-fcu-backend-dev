@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>自訂模組 · GitBook</title>
+        <title>Jest · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../practice2.html" />
     
-    <link rel="prev" href="global.html" />
+    
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -154,9 +156,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.2.1" data-path="./">
+        <li class="chapter " data-level="1.3.2.1" data-path="../node/">
             
-                <a href="./">
+                <a href="../node/">
             
                     
                     Node.JS 介紹
@@ -167,9 +169,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2.2" data-path="core.html">
+        <li class="chapter " data-level="1.3.2.2" data-path="../node/core.html">
             
-                <a href="core.html">
+                <a href="../node/core.html">
             
                     
                     常見核心模組
@@ -180,9 +182,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2.3" data-path="exec.html">
+        <li class="chapter " data-level="1.3.2.3" data-path="../node/exec.html">
             
-                <a href="exec.html">
+                <a href="../node/exec.html">
             
                     
                     執行 JS
@@ -193,9 +195,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2.4" data-path="global.html">
+        <li class="chapter " data-level="1.3.2.4" data-path="../node/global.html">
             
-                <a href="global.html">
+                <a href="../node/global.html">
             
                     
                     Global Object
@@ -206,9 +208,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2.5" data-path="module.html">
+        <li class="chapter " data-level="1.3.2.5" data-path="../node/module.html">
             
-                <a href="module.html">
+                <a href="../node/module.html">
             
                     
                     自訂模組
@@ -560,9 +562,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../testing/">
+        <li class="chapter " data-level="1.4.2" data-path="./">
             
-                <a href="../testing/">
+                <a href="./">
             
                     
                     測試開發
@@ -574,9 +576,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.2.1" data-path="../testing/jest.html">
+        <li class="chapter active" data-level="1.4.2.1" data-path="jest.html">
             
-                <a href="../testing/jest.html">
+                <a href="jest.html">
             
                     
                     Jest
@@ -711,7 +713,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >自訂模組</a>
+        <a href=".." >Jest</a>
     </h1>
 </div>
 
@@ -726,29 +728,41 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x81EA;&#x8A02;&#x6A21;&#x7D44;">&#x81EA;&#x8A02;&#x6A21;&#x7D44;</h1>
-<p>&#x5B9A;&#x7FA9;&#x6A21;&#x7D44;</p>
-<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">hello</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Hello World&apos;</span>)
-}
-
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">bye</span>(<span class="hljs-params"></span>) </span>{
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;bye&apos;</span>)
-}
-
-<span class="hljs-built_in">module</span>.exports = {
-  hello,
-}
-</code></pre>
-<p>&#x547C;&#x53EB;&#x6A21;&#x7D44;</p>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> m = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./my-module&apos;</span>)
-
-m.hello()
-</code></pre>
-<h3 id="&#x81EA;&#x5DF1;&#x958B;&#x767C;&#x7684;&#x6A21;&#x7D44;">&#x81EA;&#x5DF1;&#x958B;&#x767C;&#x7684;&#x6A21;&#x7D44;</h3>
+                                <h1 id="jest">Jest</h1>
 <ul>
-<li><a href="https://www.npmjs.com/package/youtube-playlist-cli" target="_blank">https://www.npmjs.com/package/youtube-playlist-cli</a></li>
-<li><a href="https://www.npmjs.com/package/koa-gcs" target="_blank">https://www.npmjs.com/package/koa-gcs</a></li>
+<li><a href="https://jestjs.io/" target="_blank">https://jestjs.io/</a></li>
+<li><a href="https://jestjs.io/docs/en/getting-started" target="_blank">https://jestjs.io/docs/en/getting-started</a></li>
+<li><a href="https://devhints.io/jest" target="_blank">https://devhints.io/jest</a></li>
+</ul>
+<p><img src="https://jestjs.io/img/content/matchers/equals.png" alt=""></p>
+<h3 id="&#x55AE;&#x5143;&#x6E2C;&#x8A66;">&#x55AE;&#x5143;&#x6E2C;&#x8A66;</h3>
+<pre><code>npm install --save-dev jest
+</code></pre><p>sum.js &#x6A94;</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sum</span>(<span class="hljs-params">a, b</span>) </span>{
+  <span class="hljs-keyword">return</span> a + b
+}
+<span class="hljs-built_in">module</span>.exports = sum
+</code></pre>
+<p>sum.test.js &#x6A94;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> sum = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;./sum&apos;</span>)
+
+test(<span class="hljs-string">&apos;adds 1 + 2 to equal 3&apos;</span>, () =&gt; {
+  expect(sum(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)).toBe(<span class="hljs-number">3</span>)
+})
+</code></pre>
+<p>package.json &#x6A94;</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;jest&quot;</span>
+  }
+}
+</code></pre>
+<h3 id="&#x6574;&#x5408;&#x6E2C;&#x8A66;">&#x6574;&#x5408;&#x6E2C;&#x8A66;</h3>
+<p>&#x53C3;&#x8003;&#x7DF4;&#x7FD2;&#x984C;</p>
+<h3 id="&#x5EF6;&#x4F38;&#x95B1;&#x8B80;">&#x5EF6;&#x4F38;&#x95B1;&#x8B80;</h3>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=cAKYQpTC7MA" target="_blank">Delightful JavaScript Testing with Jest - YouTube</a></li>
+<li><a href="https://jsonplaceholder.typicode.com/" target="_blank">JSONPlaceholder</a></li>
 </ul>
 
                                 
@@ -777,10 +791,14 @@ m.hello()
 
             
                 
-                <a href="global.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Global Object">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 測試開發">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="../practice2.html" class="navigation navigation-next " aria-label="Next page: 練習題">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -789,7 +807,7 @@ m.hello()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"自訂模組","level":"1.3.2.5","depth":3,"next":{"title":"套件管理工具","level":"1.3.3","depth":2,"ref":"","articles":[{"title":"NPM 介紹","level":"1.3.3.1","depth":3,"path":"npm/README.md","ref":"npm/README.md","articles":[]},{"title":"初始化","level":"1.3.3.2","depth":3,"path":"npm/init.md","ref":"npm/init.md","articles":[]},{"title":"Script","level":"1.3.3.3","depth":3,"path":"npm/script.md","ref":"npm/script.md","articles":[]},{"title":"套件管理","level":"1.3.3.4","depth":3,"path":"npm/dependencies.md","ref":"npm/dependencies.md","articles":[]},{"title":"版本","level":"1.3.3.5","depth":3,"path":"npm/version.md","ref":"npm/version.md","articles":[]},{"title":"常用套件","level":"1.3.3.6","depth":3,"path":"common-module.md","ref":"common-module.md","articles":[]}]},"previous":{"title":"Global Object","level":"1.3.2.4","depth":3,"path":"node/global.md","ref":"node/global.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"node/module.md","mtime":"2019-12-04T10:44:48.836Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-11T15:10:03.736Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Jest","level":"1.4.2.1","depth":3,"next":{"title":"練習題","level":"1.4.3","depth":2,"path":"practice2.md","ref":"practice2.md","articles":[]},"previous":{"title":"測試開發","level":"1.4.2","depth":2,"path":"testing/README.md","ref":"testing/README.md","articles":[{"title":"Jest","level":"1.4.2.1","depth":3,"path":"testing/jest.md","ref":"testing/jest.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"testing/jest.md","mtime":"2019-12-11T16:03:34.923Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-11T15:10:03.736Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

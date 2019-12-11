@@ -1,16 +1,17 @@
 {
-  "name": "todo",
+  "name": "static-demo",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@koa/router": "^8.0.2",
-    "koa": "^2.11.0"
+    "@koa/router": "^8.0.5",
+    "koa": "^2.11.0",
+    "koa-static": "^5.0.0"
   }
 }
