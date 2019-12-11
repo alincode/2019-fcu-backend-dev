@@ -728,39 +728,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="jwt">JWT</h1>
+                                <h1 id="jwt-json-web-token">JWT (JSON Web Token)</h1>
 <p><a href="https://jwt.io/" target="_blank">https://jwt.io/</a></p>
-<p>JSON Web Token (JWT, sometimes pronounced /d&#x292;&#x252;t/[1]) is an Internet standard for creating JSON-based access tokens that assert some number of claims.</p>
-<p><img src="../assets/jwt.png" alt=""></p>
-<h3 id="&#x7BC4;&#x4F8B;">&#x7BC4;&#x4F8B;</h3>
-<pre><code>npm i koa
-npm i koa-jwt
-node app.js
-</code></pre><h4 id="appjs-&#x6A94;">app.js &#x6A94;</h4>
-<pre><code class="lang-js"><span class="hljs-keyword">const</span> Koa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa&apos;</span>)
-<span class="hljs-keyword">const</span> jwt = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa-jwt&apos;</span>)
-
-<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Koa()
-
-app.use(jwt({ secret: <span class="hljs-string">&apos;shared-secret&apos;</span> }).unless({ path: [<span class="hljs-regexp">/^\/public/</span>] }))
-
-app.use(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ctx, next</span>) </span>{
-  <span class="hljs-keyword">if</span> (ctx.url.match(<span class="hljs-regexp">/^\/public/</span>)) {
-    ctx.body = <span class="hljs-string">&apos;unprotected\n&apos;</span>
-  } <span class="hljs-keyword">else</span> {
-    <span class="hljs-keyword">return</span> next()
-  }
-})
-
-app.use(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ctx</span>) </span>{
-  <span class="hljs-keyword">if</span> (ctx.url.match(<span class="hljs-regexp">/^\/api/</span>)) {
-    ctx.body = <span class="hljs-string">&apos;protected\n&apos;</span>
-  }
-})
-
-app.listen(<span class="hljs-number">3000</span>)
-</code></pre>
-<h1 id="jwt-json-web-token">JWT (JSON Web Token)</h1>
 <p><strong>JWT &#x662F;&#x4EC0;&#x9EBC;&#xFF1F;</strong></p>
 <blockquote>
 <p>JSON Web Token (JWT) is a compact URL-safe means of representing claims to be transferred between two parties. The claims in a JWT are encoded as a JSON object that is digitally signed using JSON Web Signature (JWS).</p>
@@ -774,7 +743,7 @@ app.listen(<span class="hljs-number">3000</span>)
 &quot;jot&quot;.</p>
 </blockquote>
 <p>&#x5EFA;&#x8B70;&#x767C;&#x97F3;&#x5FF5; jot</p>
-<p><img src="assets/jwt.png" alt="JWT"></p>
+<p><img src="../assets/jwt.png" alt=""></p>
 <p><a href="https://jwt.io/" target="_blank">JSON Web Tokens - jwt.io</a></p>
 <p><strong>&#x7D50;&#x69CB;&#x53EF;&#x5206;&#x70BA;&#x4E09;&#x500B;&#x90E8;&#x5206;</strong></p>
 <ul>
@@ -804,14 +773,12 @@ app.listen(<span class="hljs-number">3000</span>)
 </ul>
 </li>
 <li>&#x767B;&#x5165;</li>
-<li>&#x56FA;&#x5B9A;&#x6548;&#x671F;&#x7684;&#x5E8F;&#x865F;&#x5361;</li>
 <li>&#x5FD8;&#x8A18;&#x5BC6;&#x78BC;&#x901A;&#x77E5;&#x4FE1;</li>
 <li>&#x8A8D;&#x8B49;&#x4FE1;&#x529F;&#x80FD;</li>
 </ul>
 </li>
 <li>&#x9700;&#x8981;&#x652F;&#x63F4;&#x7121;&#x72C0;&#x614B; (stateless) &#x7684;&#x5206;&#x6563;&#x5F0F; API</li>
 </ul>
-<!-- * 可用在 SSO 的產 Token 階段 -->
 <h3 id="&#x5BE6;&#x4F5C;&#x65B9;&#x5F0F;">&#x5BE6;&#x4F5C;&#x65B9;&#x5F0F;</h3>
 <ul>
 <li>&#x5728; Server &#x78BA;&#x8A8D;&#x904E; Client &#x8EAB;&#x4EFD;&#x5F8C;&#xFF0C;&#x767C;&#x4E00;&#x7D44; JWT &#x683C;&#x5F0F;&#x7684; Token &#x7D66; Client&#xFF0C;&#x4E0B;&#x6B21; Client &#x8981;&#x5728;&#x8DDF; Server &#x8981;&#x8CC7;&#x6599;&#x7684;&#x6642;&#x5019;&#xFF0C;&#x5C31;&#x53EA;&#x8981;&#x5C07; Token &#x653E;&#x5728; request header &#x4E2D;&#xFF0C;Server &#x9A57;&#x8B49; Token &#x5F8C;&#x5C31;&#x53EF;&#x4EE5;&#x78BA;&#x8A8D;&#x8EAB;&#x4EFD;&#x3002;</li>
@@ -833,9 +800,35 @@ app.listen(<span class="hljs-number">3000</span>)
 -->
 <ol>
 <li>&#x5728;&#x6C92;&#x6709; JWT &#x524D;&#x7684;&#x505A;&#x6CD5;&#x662F;&#xFF1F;</li>
-<li>JWT vs. OAuth 2.0</li>
 </ol>
-<!-- JWT 是一種認證協議，OAuth 2.0 是一種授權框架。 -->
+<h3 id="&#x7BC4;&#x4F8B;">&#x7BC4;&#x4F8B;</h3>
+<pre><code>npm i koa
+npm i koa-jwt
+node app.js
+</code></pre><h4 id="appjs-&#x6A94;">app.js &#x6A94;</h4>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> Koa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa&apos;</span>)
+<span class="hljs-keyword">const</span> jwt = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa-jwt&apos;</span>)
+
+<span class="hljs-keyword">const</span> app = <span class="hljs-keyword">new</span> Koa()
+
+app.use(jwt({ secret: <span class="hljs-string">&apos;shared-secret&apos;</span> }).unless({ path: [<span class="hljs-regexp">/^\/public/</span>] }))
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ctx, next</span>) </span>{
+  <span class="hljs-keyword">if</span> (ctx.url.match(<span class="hljs-regexp">/^\/public/</span>)) {
+    ctx.body = <span class="hljs-string">&apos;unprotected\n&apos;</span>
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> next()
+  }
+})
+
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">ctx</span>) </span>{
+  <span class="hljs-keyword">if</span> (ctx.url.match(<span class="hljs-regexp">/^\/api/</span>)) {
+    ctx.body = <span class="hljs-string">&apos;protected\n&apos;</span>
+  }
+})
+
+app.listen(<span class="hljs-number">3000</span>)
+</code></pre>
 <p><strong>&#x5EF6;&#x4F38;&#x95B1;&#x8B80;</strong></p>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/JSON_Web_Token" target="_blank">JSON Web Token - Wikipedia</a></li>
@@ -891,7 +884,7 @@ app.listen(<span class="hljs-number">3000</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"JWT","level":"1.4.1.4","depth":3,"next":{"title":"靜態頁面","level":"1.4.1.5","depth":3,"path":"koa/static.md","ref":"koa/static.md","articles":[]},"previous":{"title":"RESTFul","level":"1.4.1.3","depth":3,"path":"restful.md","ref":"restful.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"koa/jwt.md","mtime":"2019-12-11T13:10:56.422Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-11T15:10:03.736Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JWT","level":"1.4.1.4","depth":3,"next":{"title":"靜態頁面","level":"1.4.1.5","depth":3,"path":"koa/static.md","ref":"koa/static.md","articles":[]},"previous":{"title":"RESTFul","level":"1.4.1.3","depth":3,"path":"restful.md","ref":"restful.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"koa/jwt.md","mtime":"2019-12-11T16:45:01.837Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-11T16:40:35.403Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
