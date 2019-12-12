@@ -788,22 +788,14 @@
 <ul>
 <li>&#x4FDD;&#x8B77;&#x597D;&#x79C1;&#x9470;</li>
 <li>&#x76E1;&#x91CF;&#x4F7F;&#x7528; HTTPS &#x50B3;&#x905E;&#x8CC7;&#x6599;</li>
-<li>&#x4E0D;&#x8981;&#x5C07;&#x654F;&#x611F;&#x8A0A;&#x606F;&#x9644;&#x52A0;&#x5728; payload &#x4E2D;</li>
+<li><p>&#x4E0D;&#x8981;&#x5C07;&#x654F;&#x611F;&#x8A0A;&#x606F;&#x9644;&#x52A0;&#x5728; payload &#x4E2D;</p>
+</li>
+<li><p>&#x5728;&#x6C92;&#x6709; JWT &#x524D;&#x7684;&#x505A;&#x6CD5;&#x662F;&#xFF1F;</p>
+</li>
 </ul>
-<!--
-// 每次都把 token 放進 header 的 auth 資訊中，用 server 的 public key 去解密，看有沒有 match
-// User 不能改動 expiration，不然 signature 會不一樣
-// 每次 request 就 update token，將 expiration 設為該 req 之後的 30 min。
- -->
-<!--
-基本認證只有做 base64 encoding，JWT 除了做 base64 encoding 之外，還有加密，還可以攜帶資料。
--->
-<ol>
-<li>&#x5728;&#x6C92;&#x6709; JWT &#x524D;&#x7684;&#x505A;&#x6CD5;&#x662F;&#xFF1F;</li>
-</ol>
 <h3 id="&#x7BC4;&#x4F8B;">&#x7BC4;&#x4F8B;</h3>
-<pre><code>npm i koa
-npm i koa-jwt
+<pre><code>npm i koa -S
+npm i koa-jwt -S
 node app.js
 </code></pre><h4 id="appjs-&#x6A94;">app.js &#x6A94;</h4>
 <pre><code class="lang-js"><span class="hljs-keyword">const</span> Koa = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;koa&apos;</span>)
@@ -884,7 +876,7 @@ app.listen(<span class="hljs-number">3000</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"JWT","level":"1.4.1.4","depth":3,"next":{"title":"靜態頁面","level":"1.4.1.5","depth":3,"path":"koa/static.md","ref":"koa/static.md","articles":[]},"previous":{"title":"RESTFul","level":"1.4.1.3","depth":3,"path":"restful.md","ref":"restful.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"koa/jwt.md","mtime":"2019-12-11T16:45:01.837Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-11T16:51:21.792Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JWT","level":"1.4.1.4","depth":3,"next":{"title":"靜態頁面","level":"1.4.1.5","depth":3,"path":"koa/static.md","ref":"koa/static.md","articles":[]},"previous":{"title":"RESTFul","level":"1.4.1.3","depth":3,"path":"restful.md","ref":"restful.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"koa/jwt.md","mtime":"2019-12-12T06:31:24.317Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-12-12T06:37:37.714Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

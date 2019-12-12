@@ -1,10 +1,13 @@
-const Koa = require('koa')
-const app = new Koa()
+// npm i koa -S
+// npm i koa-static -S
+// npm i @koa/router -S
 
 const path = require('path')
+const Koa = require('koa')
+const Router = require('@koa/router')
 const static = require('koa-static')
 
-const Router = require('@koa/router')
+const app = new Koa()
 const router = new Router()
 
 const hostname = '127.0.0.1'

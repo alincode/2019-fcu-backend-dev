@@ -1,17 +1,16 @@
 {
-  "name": "static-demo",
+  "name": "jwt-demo",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "mode app.js"
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@koa/router": "^8.0.5",
     "koa": "^2.11.0",
-    "koa-static": "^5.0.0"
+    "koa-jwt": "^3.6.0"
   }
 }
